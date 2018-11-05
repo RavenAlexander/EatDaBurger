@@ -1,0 +1,14 @@
+body {
+    background-color: palegreen;
+    align-content: center;
+    text-align: center;
+}
+
+h1 {
+    color: darkred;
+    text-align: center;
+}
+
+.container {
+    text-align: center;
+}
