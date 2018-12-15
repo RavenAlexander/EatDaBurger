@@ -2,8 +2,13 @@ var express = require("express")
 //var methodOverride= require('method-override');
 var exphbs = require('express-handlebars');
 
+var port = process.env.PORT || 3000;
+
 var app = express();
-app.use(express.static(__dirname + '/public'));
+app.use(express.static('public'));
+
+app.use(express.urlencoded({extended: true}));
+app.use(express.json());
 
 //app.use(methodOverride('_method'));
 app.engine('handlebars', exphbs ({
@@ -11,9 +16,11 @@ app.engine('handlebars', exphbs ({
 }));
 app.set('view engine', 'handlebars');
 
-var routes = require('./controllers/routes.js');
-app.use('/', routes);
+var routes = require('./controllers/burgercontroller.js');
+app.use(routes);
 
-var port = process.env.PORT || 3000;
-app.listen(port);
+
+app.listen(port, function(){
+    console.log(`Listening on port: ${port}`);
+});
 
