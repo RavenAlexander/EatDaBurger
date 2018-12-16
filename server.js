@@ -1,4 +1,4 @@
-var express = require("express")
+var express = require("express");
 var methodOverride= require('method-override');
 var exphbs = require('express-handlebars');
 
