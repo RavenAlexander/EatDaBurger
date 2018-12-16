@@ -4,7 +4,6 @@
   "description": "",
   "main": "server.js",
   "scripts": {
-    "prestart": "server.js build",
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node server.js"
   },
@@ -17,7 +16,7 @@
   "bugs": {
     "url": "https://github.com/RavenAlexander/EatDaBurger/issues"
   },
-  "homepage": "https://github.com/RavenAlexander/EatDaBurger#readme",
+  "homepage": "https://github.com/RavenAlexander/EatDaBurger",
   "dependencies": {
     "express": "^4.16.4",
     "express-handlebars": "^3.0.0",
