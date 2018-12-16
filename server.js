@@ -2,7 +2,7 @@ var express = require("express")
 //var methodOverride= require('method-override');
 var exphbs = require('express-handlebars');
 
-var port = process.env.PORT || 3000;
+var PORT = process.env.PORT || 3000;
 
 var app = express();
 app.use(express.static('public'));
@@ -20,7 +20,7 @@ var routes = require('./controllers/burgercontroller.js');
 app.use(routes);
 
 
-app.listen(port, function(){
-    console.log(`Listening on port: ${port}`);
+app.listen(PORT, function(){
+    console.log(`Listening on port: ${PORT}`);
 });
 
