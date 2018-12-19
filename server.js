@@ -9,6 +9,7 @@ app.use(express.static('public'));
 
 app.use(express.urlencoded({extended: false}));
 app.use(express.json());
+app.use(express.bodyParser());
 
 app.use(methodOverride('_method'));
 app.engine('handlebars', exphbs ({
