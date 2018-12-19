@@ -9,7 +9,7 @@ app.use(express.static('public'));
 
 app.use(express.urlencoded({extended: false}));
 app.use(express.json());
-app.use(express.bodyParser());
+
 
 app.use(methodOverride('_method'));
 app.engine('handlebars', exphbs ({
@@ -18,7 +18,7 @@ app.engine('handlebars', exphbs ({
 app.set('view engine', 'handlebars');
 
 var routes = require('./controllers/burgercontroller.js');
-app.use('/', routes);
+app.use(routes);
 
 
 app.listen(PORT, function(){
