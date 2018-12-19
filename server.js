@@ -2,7 +2,7 @@ var express = require("express");
 var methodOverride= require('method-override');
 var exphbs = require('express-handlebars');
 
-var PORT = /*process.env.PORT ||*/ 3000;
+var PORT = process.env.PORT || 3000;
 
 var app = express();
 app.use(express.static('public'));
